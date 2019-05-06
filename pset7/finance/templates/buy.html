@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="symbol" type="text"/>
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="shares" type="number"/>
+        <!---validate to positive integer on server because otherwse typing a non postive integer may still be possible-->
+        </div>
+        <button class="btn btn-primary" type="submit">Buy Shares</button>
+    </form>
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+<!--stocks owned-->
+<!--shares of each stock-->
+<!--current price of each stock-->
+<!--total value of each holding-->
+<!--grand total of cash + stocks total value-->
+
+
+
+
+
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3"></td>
+                <td>{{total}}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+
+
+               {% for result in assets %}
+               <tr>
+                   <td> {{result.ticker}}</td>
+                   <td> {{result.shares}}</td>
+                   <td> {{result.price}}</td>
+                   <td> {{result.total}}</td>
+                   </tr>
+                    <br>
+                {% endfor %}
+
+            <tr>
+                <td colspan="3">CASH</td>
+                <td>{{cash}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!--   {% for result in results %}-->
+<!--  {% for elem in result %}-->
+<!--    <td>{{elem}}</td>-->
+<!--  {% endfor %}-->
+<!--{% endfor %}-->
+
+<!--{% for stock in user_assets %}-->
+<!--    {% for line in stock %}-->
+<!--        <p>{{line}}</p>-->
+<!--    {%endfor%}-->
+<!--{% endfor %}-->
+
+{% endblock %}

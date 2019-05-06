@@ -1,0 +1,47 @@
+//libraries
+#include <stdio.h>
+#include<cs50.h>
+
+int main(void)
+{
+    int n;
+
+//declare variables
+//variables don't continue outside of curly braces if that's where they're declared
+
+
+// input validation
+//prompt user for a positive number
+    do
+    {
+        n = get_int("Positive Number: ");
+    }
+    while (n<=0);
+
+//then print the correct number of spaces hashes and lines
+//rows loop
+    for (int i = 0; i < height; i++)
+    {
+    //columns loop
+
+    //spaces
+
+        for(int j =0; j < variable; j++)
+        {
+
+        }
+
+    //hashes
+
+        for (int k = 0; k < 23-variable; k++)
+        {
+
+        }
+
+    //new line
+
+        printf("\n");
+
+    }
+
+} //ends main block

@@ -1,0 +1,93 @@
+Stack
+    stack can be a segment of memory where statically declared variables and functions are stored
+    stacks are also a type of structure for managing data
+        only the most recently added data can be removed lifo style
+
+
+
+    typedef struct _stack
+    {
+        VALUE array[CAPACITY];
+        int top;
+    }
+    stack;
+
+    stack s;
+
+
+    stack will hold a maximium of "CAPACITY" elements
+
+
+    push adds a new element to the top of the stack
+        acept a pointer to the stack
+        accept data of type VALUE to be added to the stack
+        add that data to the stack at the top of the stack
+        change the location of the top of the stack
+
+        stack s;
+        s.top = 0;
+        push(&s, 28);
+        push(&s, 33);
+
+
+    pop removes the most recently added element from the top of the
+
+        accept a pointer to the stack
+        change the location of the top of the stack
+        return the value that was removed from the stack
+
+        VALUE pop(stack* s);
+
+        int x = pop(&s);
+
+
+Queues
+
+    can be an array or a linked list
+    data is first in first out fifo
+
+    enqueue
+    and
+    dequeue
+
+    typedef struct _queue
+    {
+        VALUE array[CAPACITY];
+        int front;
+        int size;
+    }
+    queue;
+
+    queue q;
+    queue.front = 0;
+    queue.size = 0
+    enqueue()
+        accept a pointer to the queue
+        accept data of type VALUE to be added to the queue
+        add that data to the queue at the end of the queue
+        change the size of the queue
+
+        enqueue(&q, 28);
+
+    dequeue()
+
+    pointer to the queue
+    change the location of the furont of the queue
+    decrease the size of the queue
+    return the value that was removed from the queue
+    int x = dequeue(&q)
+
+    eventually you may need to mod % byt he size of the queue to restore the start and size values back within reach
+
+    linked list based implementation
+    doubly linked
+
+    typedef struct _queue
+    {
+        value val;
+        struct _queue *prev;
+        struct _qeueu *next;
+    }
+    queue;
+
+

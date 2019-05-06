@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include<cs50.h>
+
+// comments start with two forward slashes
+
+
+while(condition)
+{
+    stuff happens
+    }
+    
+    int n;
+    do
+    {
+    n = get_int();
+    }
+    while (n is invalid;
+    
+    
+    height = get-int("height: ");
+    
+    invalide inputs are less than 1 and more than 23
+    
+    n > 0 && < 24
+    
+    alignment done with characters
+    
+    print spaces
+    print hashes
+    print new line
+    
+    for ( initilization; condition, update)
+    {
+    //code inside
+    }
+    // code outside
+    
+    for (int i = 0; i<height: i++)
+    { 
+    print spaces
+    print hashes
+    print new line
+    printf("Hello, World!\n);
+    }
+    
+    
+    
+    for (int i=0; i < ______; i++)
+    { printf("?");
+    }
+    
+    
+// input validation
+//prompt user for a positive number
+do
+{
+int n = get_int("Positive Number: ");
+}
+while (n<=0)
+
+
+
+//cntrl c for cancel
+

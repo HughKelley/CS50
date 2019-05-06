@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+<!--stocks owned-->
+<!--shares of each stock-->
+<!--current price of each stock-->
+<!--total value of each holding-->
+<!--grand total of cash + stocks total value-->
+
+
+
+
+
+
+{% block main %}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Buy/Sell</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+               {% for result in transactions %}
+               <tr>
+                   <td> {{result.ticker}}</td>
+                   <td> {{result.buysell}}</td>
+                   <td> {{result.shares}}</td>
+                   <td> {{result.price}}</td>
+                   <td> {{result.date}}</td>
+                   <td> {{result.time}}</td>
+                   </tr>
+                    <br>
+                {% endfor %}
+
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+
+                        <select class="form-control" name="symbol">
+                <option disabled selected value="">Symbol</option>
+
+                {% for stock in holdings %}
+                    <option value="{{stock.ticker}}">{{stock.ticker}}</option>
+                {% endfor %}
+
+            </select>
+
+            <!--<input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="symbol" type="text"/>-->
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="shares" type="number"/>
+        <!---validate to positive integer on server because otherwise typing a non postive integer may still be possible-->
+        </div>
+        <button class="btn btn-primary" type="submit">Sell Shares</button>
+    </form>
+
+
+{% endblock %}
